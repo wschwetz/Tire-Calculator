@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+    <style> 
+        input[type=text] {
+            border: 0px solid red;
+            background-color: #121212dc;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+<table border = 0>
+    <tr>
+    <td colspan="3"><h2>Tire Calculator </h2></td>
+    </tr>
+    <form name = "userIn"></form>
+    <tr>
+        <td><input type = "text" id = "currentWidth" width=5 value="205"></td>
+        <td> / <input type = "text" id = "currentAspect" value="55"></td>
+        <td> R <input type = "text" id = "currentRim" value="16"> <p></p></td>
+    </tr>
+    <tr>
+        <td><input type = "text" id = "newWidth" value="225"></td>
+        <td> / <input type = "text" id = "newAspect" value="45"></td>
+        <td> R <input type = "text" id = "newRim" value="17"></td>
+    </tr>
+    <tr>
+        <td colspan="3"><button type="button" onclick="btnClickBegin()">Run</button></td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <input type="radio" onchange="btnClickBegin()" id="both" name ="displayChoice" value="1" checked>Both 
+            <input type="radio" onchange="btnClickBegin()" id="mm" name ="displayChoice" value="2">MM 
+            <input type="radio" onchange="btnClickBegin()" id="inches" name ="displayChoice" value="3">Inches
+        </td>
+    </tr>
+    </form>
+
+
+    <table style="background-color:#121212; color:aliceblue">
+        <tr>
+            <td></td>
+            <td>Current Size</td>
+            <td>New Size</td>
+            <td>Difference</td>
+        </tr>
+        <tr>
+            <td>Overal Height (Diameter)</td>
+            <td id = "currentDiameterOut" align="center">00</td>
+            <td id = "newDiameterOut" align="center">00</td>
+            <td id = "diamDifference" align="center">00</td>
+        </tr>
+        <tr>
+            <td>Width</td>
+            <td id = "currentWidthOut" align="center">00</td>
+            <td id = "newWidthOut" align="center">00</td>
+            <td id = "widthDifference" align="center">00</td>
+        </tr>
+        <tr>
+            <td>Circumference</td>
+            <td id = "currentCircumOut" align="center">00</td>
+            <td id = "newCircumOut" align="center">00</td>
+            <td id = "circumDifference" align="center">00</td>
+        </tr>
+        <tr>
+            <td>Sidewall Height</td>
+            <td id = "currentSidewall" align="center">00</td>
+            <td id = "newSidewall" align="center">00</td>
+            <td id = "sideWallDiff" align="center">00</td>
+        </tr>
+    </table>
+
+
+</table>
+
+<div id="temp">a</div>
+<script src="Main.js"></script>
+</body>
+</html>
